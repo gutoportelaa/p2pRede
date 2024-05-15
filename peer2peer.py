@@ -93,3 +93,32 @@ if __name__ == '__main__':
 
     # Aguardar entrada do usuário para manter o programa em execução
     input("Pressione Enter para sair...")
+
+'''
+função de pegar ip:
+
+def obter_endereco_ip():
+    try:
+        # Cria um socket para obter o endereço IP
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        # Conecta-se a um servidor qualquer apenas para obter o endereço IP
+        s.connect(("8.8.8.8", 80))
+        endereco_ip = s.getsockname()[0]
+        s.close()
+        return endereco_ip
+    except Exception as e:
+        print("Erro ao obter endereço IP:", e)
+        return None
+
+def run_server():
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   
+    server_ip = "127.0.0.1"      # llocal host (It is recommended to use values above 1023 for your port numbers to avoid collisions with ports used by system processes)
+    port = 8000
+    
+    
+endereco_ip = obter_endereco_ip()
+if endereco_ip:
+    print("Endereço IP da sua máquina na rede local:", endereco_ip)
+else:
+    print("Não foi possível obter o endereço IP da sua máquina.")
+        '''
